@@ -4,11 +4,22 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Person;
 
 Route::get('/', function () {
-    return view('homePage');
-})->name('home-page');
+    return view('landing');
+})->name('landing');
 
-Route::get('/personalInformation', function () {
-    return view('personalInformation', ['data' => Person::inRandomOrder()->get()]);
-})->name('personal-information');
+Route::get('/motobuying', function () {
+    return view('motobuying');
+})->name('motobuying');
 
-Route::post('/submit', 'PersonController@submit')->name('submit-information');
+Route::get('/motonews', function () {
+    return view('motonews');
+})->name('motonews');
+
+Route::get('/motoinfo', function () {
+    return view('motoinfo');
+})->name('motoinfo');
+
+Route::get('/motoconteiner', function () {
+    return view('motoconteiner');
+})->name('motoconteiner');
+
